@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function() {
+	return 'Hello world!!!';
+});
+
+Route::get('/oi/{nome}/{sobrenome}', function($nome, $sobrenome) {
+	return "Oi, $nome $sobrenome!!!";
+});
