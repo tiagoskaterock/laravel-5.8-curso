@@ -30,14 +30,22 @@ Route::get('/seunome/{nome?}', function($nome = null) {
 	}
 });
 
-Route::prefix('/app')->group(function(){
+Route::prefix('/aplication')->group(function(){
+
 		Route::get('/', function() {
 			return view('/app');
-		});
+		})->name('app');
+
 		Route::get('/docs', function() {
 			return view('docs');
-		});
+		})->name('app.docs');
+
 		Route::get('/users', function() {
 			return view('users');
-		});
+		})->name('app.users');
+
 });
+
+Route::get('/produtos', function() {
+	return view('produtos');
+})->name('produtos');
