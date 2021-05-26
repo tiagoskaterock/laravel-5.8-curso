@@ -29,3 +29,15 @@ Route::get('/seunome/{nome?}', function($nome = null) {
 		return 'Olá!';
 	}
 });
+
+Route::prefix('/app')->group(function(){
+		Route::get('/', function() {
+			return view('/app');
+		});
+		Route::get('/docs', function() {
+			return view('docs');
+		});
+		Route::get('/users', function() {
+			return view('users');
+		});
+});
