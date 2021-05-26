@@ -22,3 +22,13 @@ Route::get('/hello', function() {
 Route::get('/oi/{nome}/{sobrenome}', function($nome, $sobrenome) {
 	return "Oi, $nome $sobrenome!!!";
 });
+
+Route::get('/seunome/{nome?}', function($nome = null) {
+	if (isset($nome)) {
+		$nome = ucfirst($nome);
+		return 'Seja bem vindo ' . $nome . '!';
+	}
+	else {
+		return 'Olá!';
+	}
+});
