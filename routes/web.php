@@ -2,7 +2,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/hello', function() {
 	return 'Hello world!!!';
@@ -49,3 +49,15 @@ Route::prefix('/aplication')->group(function(){
 Route::get('/produtos', function() {
 	return view('produtos');
 })->name('produtos');
+
+Route::get('/budega', function() {
+	return view('budega');
+})->name('budega');
+
+Route::redirect('budega', 'produtos', 301);
+
+Route::redirect('/', 'aplication', 301);
+
+Route::get('todosprodutos', function() {
+	return redirect()->route('produtos');
+});
