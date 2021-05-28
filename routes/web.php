@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -60,4 +62,31 @@ Route::redirect('/', 'aplication', 301);
 
 Route::get('todosprodutos', function() {
 	return redirect()->route('produtos');
+});
+
+
+
+
+Route::get('/porcaria', function() {
+	return 'Oi porcaria!';
+});
+
+Route::post('/porcaria', function() {
+	return 'Oi porcaria!';
+});
+
+Route::put('/porcaria', function() {
+	return 'Oi porcaria!';
+});
+
+Route::delete('/porcaria', function() {
+	return 'Oi porcaria!';
+});
+
+Route::patch('/porcaria', function() {
+	return 'Oi porcaria!';
+});
+
+Route::options('/porcaria', function() {
+	return 'Oi porcaria!';
 });
