@@ -6,6 +6,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('produtos', 'MeuControllador@produtos');
+Route::get('nome', 'MeuControllador@getNome');
+Route::get('idade', 'MeuControllador@getIdade');
+Route::get('multiplicar/{n1}/{n2}', 'MeuControllador@multiplicar');
+
+/*
 Route::get('/hello', function() {
 	return 'Hello world!!!';
 });
@@ -90,3 +96,4 @@ Route::patch('/porcaria', function() {
 Route::options('/porcaria', function() {
 	return 'Oi porcaria!';
 });
+*/
