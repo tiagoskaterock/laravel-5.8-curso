@@ -11,6 +11,8 @@ Route::get('nome', 'MeuControllador@getNome');
 Route::get('idade', 'MeuControllador@getIdade');
 Route::get('multiplicar/{n1}/{n2}', 'MeuControllador@multiplicar');
 
+Route::resource('clientes', 'ClienteControlador');
+
 /*
 Route::get('/hello', function() {
 	return 'Hello world!!!';
