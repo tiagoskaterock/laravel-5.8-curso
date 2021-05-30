@@ -32,7 +32,7 @@ class ClienteControlador extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.create');
     }
 
     /**
@@ -43,7 +43,14 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = count($this->clientes) + 1;
+        $nome = $request->nome;
+        $dados = ['id'=>$id, 'nome'=>$nome];
+        $this->clientes[] = $dados;
+        dd($this->clientes);
+        //return redirect()->route('clientes.index');
+        
+
     }
 
     /**
