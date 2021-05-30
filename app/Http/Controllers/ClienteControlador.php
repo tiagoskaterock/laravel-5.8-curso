@@ -8,11 +8,11 @@ class ClienteControlador extends Controller
 {
 
     private $clientes = [
-        ['id'=>'1', 'nome']=>'Ademir';
-        ['id'=>'2', 'nome']=>'Maira';
-        ['id'=>'3', 'nome']=>'Antonio';
-        ['id'=>'4', 'nome']=>'Jonas';
-        ['id'=>'5', 'nome']=>'Joana';
+        ['id'=>'1', 'nome'=>'Ademir'],
+        ['id'=>'2', 'nome'=>'Maira'],
+        ['id'=>'3', 'nome'=>'Antonio'],
+        ['id'=>'4', 'nome'=>'Jonas'],
+        ['id'=>'5', 'nome'=>'Joana']
     ];
     /**
      * Display a listing of the resource.
@@ -21,7 +21,8 @@ class ClienteControlador extends Controller
      */
     public function index()
     {
-        //
+        $clientes = $this->clientes;
+        return view('clientes.index', compact('clientes'));
     }
 
     /**
