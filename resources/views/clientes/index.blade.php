@@ -11,7 +11,8 @@
 		@foreach ($clientes as $c)
 		<li>
 			{{ $c['nome'] }} | 
-			<a href="{{ route('clientes.edit', $c['id']) }}">Edit</a>
+			<a href="{{ route('clientes.edit', $c['id']) }}">Edit | </a>
+			<a href="{{ route('clientes.show', $c['id']) }}">Show</a>
 		</li>
 		@endforeach
 	</ul>
