@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Clientes</title>
+	<style type="text/css">
+		ul { list-style: none; }
+	</style>
 </head>
 <body>
 	<h1>Clientes</h1>
@@ -10,7 +13,7 @@
 	<ul>
 		@foreach ($clientes as $c)
 		<li>
-			{{ $c['nome'] }} | 
+			{{ $c['id'] }} - {{ $c['nome'] }} | 
 			<a href="{{ route('clientes.edit', $c['id']) }}">Edit | </a>
 
 			<a href="{{ route('clientes.show', $c['id']) }}">Show | </a>
