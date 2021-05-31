@@ -1,13 +1,19 @@
+@extends('layouts.principal')
+
+@section('header')
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Clientes</title>
+	<title>Principal</title>
 	<style type="text/css">
 		ul { list-style: none; }
 	</style>
 </head>
 <body>
+@endsection
+
+@section('conteudo')
 	<h1>{{ $titulo }}</h1>
 	<a href="{{ route('clientes.create') }}">Create</a>
 
@@ -35,6 +41,7 @@
 	<h4>Não há clientes cadastrados em {{ $titulo }}</h4>
 
 	@endif
+@endsection
 
 </body>
 </html>
