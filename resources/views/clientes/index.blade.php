@@ -10,6 +10,8 @@
 <body>
 	<h1>{{ $titulo }}</h1>
 	<a href="{{ route('clientes.create') }}">Create</a>
+
+	@if(!empty($clientes))
 	<ul>
 		@foreach ($clientes as $c)
 		<li>
@@ -27,5 +29,12 @@
 		</li>
 		@endforeach
 	</ul>
+
+	@else
+
+	<h4>Não há clientes cadastrados em {{ $titulo }}</h4>
+
+	@endif
+
 </body>
 </html>

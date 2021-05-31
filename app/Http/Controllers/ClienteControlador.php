@@ -68,7 +68,12 @@ class ClienteControlador extends Controller
     public function store(Request $request)
     {
         $clientes = session('clientes');
-        $id = end($clientes)['id'] + 1;
+        if (empty($clientes)) {
+            $id = 0;
+        }
+        else {
+            $id = end($clientes)['id'] + 1;            
+        }
         $nome = $request->nome;
         $dados = ['id'=>$id, 'nome'=>$nome];
         $clientes[] = $dados;
