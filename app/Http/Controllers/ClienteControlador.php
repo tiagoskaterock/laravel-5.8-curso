@@ -31,7 +31,7 @@ class ClienteControlador extends Controller
     public function index()
     {
         $clientes = session('clientes');
-        $titulo = 'clientes Sensuais 2021';
+        $titulo = 'Clientes Sensuais 2021';
         return view('clientes.index', compact('clientes', 'titulo'));
 
         /*

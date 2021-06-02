@@ -1,18 +1,5 @@
 @extends('layouts.principal')
 
-@section('header')
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Principal</title>
-	<style type="text/css">
-		ul { list-style: none; }
-	</style>
-</head>
-<body>
-@endsection
-
 @section('conteudo')
 	<h1>{{ $titulo }}</h1>
 	<a href="{{ route('clientes.create') }}">Create</a>
@@ -22,6 +9,7 @@
 		@foreach ($clientes as $c)
 		<li>
 			{{ $c['id'] }} - {{ $c['nome'] }} | 
+			
 			<a href="{{ route('clientes.edit', $c['id']) }}">Edit | </a>
 
 			<a href="{{ route('clientes.show', $c['id']) }}">Show | </a>
@@ -42,6 +30,3 @@
 
 	@endif
 @endsection
-
-</body>
-</html>
