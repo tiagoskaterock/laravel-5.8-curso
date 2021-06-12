@@ -10,4 +10,20 @@
 		<li>Acessórios</li>
 		<li>Roupas</li>
 	</ul>
+
+	@component('componentes.alerta')
+	@endcomponent
+
+	@component('componentes.alerta')
+	@endcomponent
+
+	@component('componentes.alerta')
+	@endcomponent
+
+	@component('componentes.alerta')
+	@endcomponent
+
+
+
+
 @endsection
