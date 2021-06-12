@@ -30,3 +30,30 @@
 
 	@endif
 @endsection
+
+
+
+@for($i = 0; $i < 10; $i++)
+	<p>{{ $i }}</p>
+@endfor
+
+
+@foreach($clientes as $cliente)
+	<h2>Total de itens</h2>
+	{{ $loop->count }}
+
+	<p>{{ $cliente['nome'] }}</p>
+
+	<p>Índice: {{ $loop->index }}</p>
+	<p>Iteração: {{ $loop->iteration }}</p>
+
+	@if($loop->first)
+		<h3>Primeiro</h3>
+	@endif
+
+	@if($loop->last)
+		<h3>Último</h3>
+	@endif
+@endforeach
+
+
