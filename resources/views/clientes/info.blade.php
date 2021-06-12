@@ -1,5 +1,7 @@
 @extends('layouts.principal')
 
+@section('titulo', 'Info')
+
 @section('conteudo')
 	<h1>Info</h1>
 

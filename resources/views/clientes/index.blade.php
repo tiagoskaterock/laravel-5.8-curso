@@ -1,5 +1,7 @@
 @extends('layouts.principal')
 
+@section('titulo', 'Clientes')
+
 @section('conteudo')
 	<h1>{{ $titulo }}</h1>
 	<a href="{{ route('clientes.create') }}">Create</a>
@@ -32,7 +34,7 @@
 @endsection
 
 
-
+<!--
 @for($i = 0; $i < 10; $i++)
 	<p>{{ $i }}</p>
 @endfor
@@ -55,5 +57,6 @@
 		<h3>Último</h3>
 	@endif
 @endforeach
+-->
 
 
