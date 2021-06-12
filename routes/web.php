@@ -6,7 +6,14 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('produtos', 'MeuControllador@produtos');
+Route::get('produtos', function(){
+	return view('outros.produtos');
+})->name('produtos');
+
+Route::get('departamentos', function(){
+	return view('outros.departamentos');
+})->name('departamentos');
+
 Route::get('nome', 'MeuControllador@getNome');
 Route::get('idade', 'MeuControllador@getIdade');
 Route::get('multiplicar/{n1}/{n2}', 'MeuControllador@multiplicar');
